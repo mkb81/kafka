@@ -1,12 +1,12 @@
 # Kafka example
 
-This Pyhton script send and receive messages via [Kafka](https://kafka.apache.org) distributed stream processing system.
+This Pyhton script send and receive messages via the [Kafka](https://kafka.apache.org) distributed stream processing system.
 
 ## Install
 
 ### Python
 
-Tyoe this command to create an [virtual environment](https://docs.python.org/3/library/venv.html) on your current folder
+Tyoe this command to create an [virtual environment](https://docs.python.org/3/library/venv.html) in your current folder
 
     virtualenv -p python3 venv
 
@@ -51,12 +51,21 @@ In a new cosnole the this command to start Kafka
 
 ### Start script
 
-    python3 marc.py -h
-    usage: marc.py [-h] -t TOPIC -s SEND_STRING
+    python3 kafka.py -h
+    usage: kafka.py [-h] -t TOPIC -s SEND_STRING
 
     Small Kafka send and receive data example
 
     optional arguments:
     -h, --help      show this help message and exit
     -t TOPIC        Kafka topic
-    -s SEND_STRING  Message to send
+    
+## Output
+
+On console you should see an output like this
+
+    start.py -t test -s hello,world!
+    2020-07-27 20:28:40.785877 - send hello,world! via topic: test
+    2020-07-27 20:28:45.947345 - receive hello,world! via topic: test
+
+    Process finished with exit code 0
